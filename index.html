@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="de">
+
+	<head>
+		<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>GeoLocator</title>
+		<link rel="stylesheet" type="text/css" href="src/css/styles.css">
+	</head>
+
+	<body>
+
+    <!-- Header -->
+
+    <header id="kopfleiste">
+      <h1>GeoLocator</h1>
+    </header>
+
+    <!-- Hauptbereich -->
+
+    <main>
+
+      <div id="flex-container">
+
+        <!-- Textliche Beschreibung der nächstgelegenen Stadt, Orte etc. und Button zur Bestimmung des Standortes -->
+        <article id="textOrt">
+          <p>Sie befinden sich in der Nähe von: Wetzlar</p>
+          <button type="button" name="positionErmitteln" onclick="getLocation();">Position ermitteln</button>
+        </article>
+
+        <article id="karteContainer">
+
+          <!-- Initialisierung der Karte mit Zentrierung auf das Waldstadion -->
+          <div id="karte"></div>
+
+            <script>
+              let map;
+              function initMap() {
+                map = new google.maps.Map(document.getElementById('karte'), {
+                  center: {lat: 50.068611, lng: 8.645278},
+                  zoom: 12
+                });
+              };
+
+              // Funktion zur Ermittlung des Standortes per Google-Geolocation-API und Zentrierung der Karte
+              function getLocation() {
+                const url="https://www.googleapis.com/geolocation/v1/geolocate?key=YOUR-API-KEY"
+                fetch(url,{method:"POST"})
+                .then(res => {return res.json()})
+                .then(data => {
+                  map.setCenter({lat: data.location.lat, lng: data.location.lng});
+                })
+                .catch(error => console.log(error))
+              }
+            </script>
+            <script src="https://maps.googleapis.com/maps/api/js?key=YOUR-API-KEY&callback=initMap"
+            async defer></script>
+
+        </article>
+
+      </div>
+
+    </main>
+
+	</body>
+
+</html>
