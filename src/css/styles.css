@@ -41,10 +41,10 @@ body {
 
 #textOrt > p {
   color: #000000;
-  font-size: 3rem;
+  font-size: 2.5rem;
   text-align: center;
   margin: 0;
-  padding: 2em;
+  padding: 0.5em;
 }
 
 #textOrt > button {
@@ -58,7 +58,7 @@ body {
 /* Karte */
 
 #karteContainer {
-  display:flex;
+  display: flex;
   width: 62.5%;
   margin-top: 1em;
   height: 600px;
