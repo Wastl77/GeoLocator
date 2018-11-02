@@ -45,7 +45,7 @@
 
               // Standort ermitteln, Karte darauf zentrieren, mit Koordinaten Geocode aufrufen und ausgeben im Textfeld
               function getLocation() {
-                const url="https://www.googleapis.com/geolocation/v1/geolocate?key=AIzaSyDZhHS4OYBe0AGr1cByePHG-pz8ORJ1KtU"
+                const url="https://www.googleapis.com/geolocation/v1/geolocate?key=YOUR_API_KEY"
                 fetch(url,{method:"POST"})
                 .then(res => {return res.json()})
                 .then(data => {
@@ -55,7 +55,7 @@
                 .catch(error => console.log(error))
               }
 							function geocodeLocation(lat, lng) {
-								const url="https://maps.googleapis.com/maps/api/geocode/json?latlng="+lat+","+lng+"&key=AIzaSyDZhHS4OYBe0AGr1cByePHG-pz8ORJ1KtU"
+								const url="https://maps.googleapis.com/maps/api/geocode/json?latlng="+lat+","+lng+"&key=YOUR_API_KEY"
 								fetch(url)
 								.then(res => {return res.json()})
 								.then(data => {
@@ -66,7 +66,7 @@
 								.catch(error => console.log(error))
 							}
             </script>
-            <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDZhHS4OYBe0AGr1cByePHG-pz8ORJ1KtU&callback=initMap"
+            <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"
             async defer></script>
 
         </article>
