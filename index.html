@@ -6,68 +6,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>GeoLocator</title>
 		<link rel="stylesheet" type="text/css" href="src/css/styles.css">
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDZhHS4OYBe0AGr1cByePHG-pz8ORJ1KtU&callback=initMap"
+		async defer></script>
 	</head>
 
 	<body>
 
     <!-- Header -->
 
-    <header id="kopfleiste">
+    <header>
       <h1>GeoLocator</h1>
     </header>
 
-    <!-- Hauptbereich -->
+    <!-- Content -->
 
     <main>
 
-      <div id="flex-container">
+      <div class="flex-container">
 
         <!-- Textliche Beschreibung der nächstgelegenen Stadt, Orte etc. und Button zur Bestimmung des Standortes -->
-        <article id="textOrt">
+        <article class="text-city">
           <p>Sie befinden sich in der Nähe von:</p>
-					<p id="standort"></p>
-          <button type="button" name="positionErmitteln" onclick="getLocation();">Position ermitteln</button>
+					<p id="currentLocation"></p>
+          <button class="text-city__button" type="button" name="positionErmitteln" onclick="getLocation();">Position ermitteln</button>
         </article>
 
-        <article id="karteContainer">
+        <article class="map-container">
 
-          <div id="karte"></div>
+          <div id="map"></div>
 
-            <script>
-							// Initialisierung der Karte mit Zentrierung auf das Waldstadion
-              let map;
-              function initMap() {
-                map = new google.maps.Map(document.getElementById('karte'), {
-                  center: {lat: 50.068611, lng: 8.645278},
-                  zoom: 12
-                });
-              };
-
-              // Standort ermitteln, Karte darauf zentrieren, mit Koordinaten Geocode aufrufen und ausgeben im Textfeld
-              function getLocation() {
-                const url="https://www.googleapis.com/geolocation/v1/geolocate?key=YOUR_API_KEY"
-                fetch(url,{method:"POST"})
-                .then(res => {return res.json()})
-                .then(data => {
-                  map.setCenter({lat: data.location.lat, lng: data.location.lng});
-									geocodeLocation(data.location.lat, data.location.lng);
-                })
-                .catch(error => console.log(error))
-              }
-							function geocodeLocation(lat, lng) {
-								const url="https://maps.googleapis.com/maps/api/geocode/json?latlng="+lat+","+lng+"&key=YOUR_API_KEY"
-								fetch(url)
-								.then(res => {return res.json()})
-								.then(data => {
-									let standort = (data.results[0].address_components[2].long_name);
-									document.getElementById("standort").innerHTML = standort;
-									new google.maps.Marker({position: {lat: lat, lng: lng}, map: map});
-								})
-								.catch(error => console.log(error))
-							}
-            </script>
-            <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"
-            async defer></script>
+          <script src="src/js/scripts.js"></script>
 
         </article>
 
