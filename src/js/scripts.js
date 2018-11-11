@@ -31,3 +31,5 @@ import {geocodeLocation} from './geocode.js'
   //   })
   //   .catch(error => console.log(error))
   // }
+
+  window.initMap = initMap;
