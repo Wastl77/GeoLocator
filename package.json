@@ -4,6 +4,7 @@
   "description": "This is a very first try to integrate Google Maps API in a Webpage for training reasons.",
   "main": "index.js",
   "scripts": {
+    "start:dev": "webpack-dev-server",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --config webpack.config.prod.js"
   },
@@ -19,6 +20,7 @@
   "homepage": "https://github.com/Wastl77/GeoLocator#readme",
   "devDependencies": {
     "webpack": "^4.25.1",
-    "webpack-cli": "^3.1.2"
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.10"
   }
 }
