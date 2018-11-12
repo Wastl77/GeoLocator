@@ -1,50 +1,50 @@
 <!DOCTYPE html>
 <html lang="de">
 
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>GeoLocator</title>
-		<link rel="stylesheet" type="text/css" href="src/css/styles.css">
-		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDZhHS4OYBe0AGr1cByePHG-pz8ORJ1KtU"
-		async defer></script>
-	</head>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GeoLocator</title>
+    <link rel="stylesheet" type="text/css" href="src/css/styles.css">
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDZhHS4OYBe0AGr1cByePHG-pz8ORJ1KtU"
+    async defer></script>
+  </head>
 
-	<body>
+  <body>
 
-		<!-- Header -->
+    <!-- Header -->
 
-		<header>
-			<h1 class="header_title">GeoLocator</h1>
-		</header>
+    <header>
+      <h1 class="header_title">GeoLocator</h1>
+    </header>
 
-		<!-- Content -->
+    <!-- Content -->
 
-		<main>
+    <main>
 
-			<div class="flex-container">
+      <div class="flex-container">
 
-				<!-- Textliche Beschreibung der nächstgelegenen Stadt, Orte etc. und Button zur Bestimmung des Standortes -->
-				<article class="text-city">
-					<p class="text-city_copy">Sie befinden sich in der Nähe von:</p>
-					<p id="currentLocation" class="text-city_copy"></p>
-					<button class="text-city__button" type="button" name="positionErmitteln" onclick="getLocation();">Position ermitteln</button>
-				</article>
+        <!-- Textliche Beschreibung der nächstgelegenen Stadt, Orte etc. und Button zur Bestimmung des Standortes -->
+        <article class="text-city">
+          <p class="text-city_copy">Sie befinden sich in der Nähe von:</p>
+          <p id="currentLocation" class="text-city_copy"></p>
+          <button class="text-city__button" type="button" name="positionErmitteln" onclick="getLocation();">Position ermitteln</button>
+        </article>
 
-				<article class="map-container">
+        <article class="map-container">
 
-					<div id="map"></div>
+          <div id="map"></div>
 
-					<script src="/bundle.js"></script>
+          <script src="/bundle.js"></script>
 
-					<!-- <script src="src/js/scripts.js"></script> -->
+          <!-- <script src="src/js/scripts.js"></script> -->
 
-				</article>
+        </article>
 
-			</div>
+      </div>
 
-		</main>
+    </main>
 
-	</body>
+  </body>
 
 </html>
