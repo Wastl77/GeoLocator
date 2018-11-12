@@ -1,127 +1,127 @@
 /* Global */
 
 html {
-  font-size: 16px;
+	font-size: 16px;
 }
 
 body {
-  margin: 0;
+	margin: 0;
 }
 
 * {
-  box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 /* Header */
 
 .header_title {
-  margin: 0 auto;
-  width: 95%;
-  background-color: #A7A2A9;
-  color: #000000;
-  font-size: 5rem;
-  text-align: center;
-  border-radius: 8px;
+	margin: 0 auto;
+	width: 95%;
+	background-color: #A7A2A9;
+	color: #000000;
+	font-size: 5rem;
+	text-align: center;
+	border-radius: 8px;
 }
 
 .flex-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
 }
 
 /* Textbeschreibung des Ortes */
 
 .text-city {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 32.5%;
-  height: 600px;
-  background-color: #575A5E;
-  border-radius: 8px;
-  margin-top: 1rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	width: 32.5%;
+	height: 600px;
+	background-color: #575A5E;
+	border-radius: 8px;
+	margin-top: 1rem;
 }
 
 .text-city_copy {
-  color: #000000;
-  font-size: 2.5rem;
-  text-align: center;
-  margin: 1rem 0 0 0;
-  padding: 0.5rem;
+	color: #000000;
+	font-size: 2.5rem;
+	text-align: center;
+	margin: 1rem 0 0 0;
+	padding: 0.5rem;
 }
 
 .text-city p:last-of-type {
-  padding: 0;
-  margin: 0;
+	padding: 0;
+	margin: 0;
 }
 
 .text-city__button {
-  width: 50%;
-  margin: 1rem auto;
-  font-size: 2.5rem;
-  background-color: #A7A2A9;
-  border-radius: 8px;
+	width: 50%;
+	margin: 1rem auto;
+	font-size: 2.5rem;
+	background-color: #A7A2A9;
+	border-radius: 8px;
 }
 
 /* Karte */
 
 .map-container {
-  display: flex;
-  width: 62.5%;
-  margin-top: 1em;
-  height: 600px;
-  background-color: #575A5E;
-  border-radius: 8px;
+	display: flex;
+	width: 62.5%;
+	margin-top: 1em;
+	height: 600px;
+	background-color: #575A5E;
+	border-radius: 8px;
 }
 
 #map {
-  width: 95%;
-  height: 95%;
-  margin: auto;
-  border-radius: 8px;
+	width: 95%;
+	height: 95%;
+	margin: auto;
+	border-radius: 8px;
 }
 
 @media (max-width: 891px) {
-  .flex-container {
-    flex-direction: column;
-  }
-  .header_title {
-    font-size: 3rem;
-  }
-  .text-city {
-    width: 95%;
-    margin: 1rem auto;
-    height: 300px;
-  }
-  .map-container {
-    width: 95%;
-    margin: 0 auto;
-  }
+	.flex-container {
+		flex-direction: column;
+	}
+	.header_title {
+		font-size: 3rem;
+	}
+	.text-city {
+		width: 95%;
+		margin: 1rem auto;
+		height: 300px;
+	}
+	.map-container {
+		width: 95%;
+		margin: 0 auto;
+	}
 }
 
-  @media (max-width: 652px) {
-    .flex-container {
-      flex-direction: column;
-    }
-  .header_title {
-      font-size: 3rem;
-    }
-    .text-city {
-      width: 95%;
-      margin: 1rem auto;
-      height: 300px;
-    }
-    .map-container {
-      width: 95%;
-      margin: 0 auto;
-    }
-    .text-city__button {
-      width: 30%;
-      margin: 1rem auto;
-      font-size: 1.5rem;
-    }
-    .text-city_copy {
-      font-size: 1.5rem;
-    }
+	@media (max-width: 652px) {
+		.flex-container {
+			flex-direction: column;
+		}
+	.header_title {
+			font-size: 3rem;
+		}
+		.text-city {
+			width: 95%;
+			margin: 1rem auto;
+			height: 300px;
+		}
+		.map-container {
+			width: 95%;
+			margin: 0 auto;
+		}
+		.text-city__button {
+			width: 30%;
+			margin: 1rem auto;
+			font-size: 1.5rem;
+		}
+		.text-city_copy {
+			font-size: 1.5rem;
+		}
 }
