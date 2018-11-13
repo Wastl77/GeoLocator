@@ -32,4 +32,12 @@ import {geocodeLocation} from './geocode.js'
   //   .catch(error => console.log(error))
   // }
 
-  initMap();
+  function waitForGoogle() {
+    if (typeof google==='undefined') {
+      setTimeout (() => waitForGoogle(), 1000);
+    }
+    else {
+      initMap();
+    }
+  }
+  waitForGoogle();
