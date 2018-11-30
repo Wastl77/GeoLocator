@@ -5,7 +5,7 @@ export function geocodeLocation(lat, lng) {
   .then(data => {
     let currentLocation = (data.results[0].address_components[2].long_name);
     document.getElementById("currentLocation").innerHTML = currentLocation;
-    new google.maps.Marker({position: {lat: lat, lng: lng}, map: map});
+    // new google.maps.Marker({position: {lat: lat, lng: lng}, map: map});
   })
   .catch(error => console.log(error))
 }
