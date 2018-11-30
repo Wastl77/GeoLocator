@@ -17,7 +17,7 @@ import {geocodeLocation} from './geocode.js'
     .then(data => {
       map.setCenter({lat: data.location.lat, lng: data.location.lng});
       geocodeLocation(data.location.lat, data.location.lng);
-      // new google.maps.Marker({position: {lat: data.location.lat, lng: data.location.lng}, map: map});
+      new google.maps.Marker({position: {lat: data.location.lat, lng: data.location.lng}, map: map});
     })
     .catch(error => console.log(error))
   }
