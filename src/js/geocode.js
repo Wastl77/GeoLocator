@@ -15,6 +15,8 @@ export function geocodeLocation(map, lat, lng) {
           lat,
           lng
         },
+        icon: 'src/img/HLF.svg',
+        label: "0146-1",
         map,
       });
     })
