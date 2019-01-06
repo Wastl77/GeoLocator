@@ -3,6 +3,11 @@ export function geocodeLocation(map, lat, lng) {
 
   const element = document.querySelector("[data-current-location]");
 
+  const hlf = {
+    url: 'src/img/HLF.svg',
+    labelOrigin: new google.maps.Point(22, 39)
+  };
+
   fetch(url)
     .then(response => response.json())
     .then((data) => {
@@ -15,8 +20,9 @@ export function geocodeLocation(map, lat, lng) {
           lat,
           lng
         },
-        icon: 'src/img/HLF.svg',
+        icon: hlf,
         label: "0146-1",
+        draggable: true,
         map,
       });
     })
